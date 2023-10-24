@@ -78,13 +78,13 @@ async function submit() {
           existingAccount.value = false;
         }, 4000);
 
-        reloadPage();
+        // reloadPage();
       }
     } else {
       errorSignUpState.value = true;
       setTimeout(() => {
         errorSignUpState.value = false;
-      }, 2500);
+      }, 3500);
     }
   } catch (error) {
 
@@ -141,7 +141,7 @@ const checkLastName = computed(() => {
 <template>
   <div class="sectionTwo">
     <div v-if="errorSignUpState">
-      <AlertMessageComponent message="Input fields cannot be empty!" />
+      <!-- <AlertMessageComponent message="Input fields cannot be empty!" /> -->
     </div>
     <div v-if="existingAccount">
       <AlertMessageComponent message="The account already exists!" />
